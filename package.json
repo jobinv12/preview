@@ -1,0 +1,17 @@
+{
+  "name": "visualizeyourmove",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://jobinv12.github.io/preview",
+  "dependencies": {
+    "danfojs-node": "^0.1.5",
+    "gh-pages": "^3.1.0"
+  }
+}
