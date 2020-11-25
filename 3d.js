@@ -2,6 +2,7 @@ var selectValue;
 
 function generateGraph3d() {
   selectValue = document.getElementById("datasets").value;
+  console.log(selectValue);
 
   document.getElementById("Fig1").style.display = "block";
   document.getElementById("Fig2").style.display = "block";
@@ -241,7 +242,7 @@ function Cheek_Tap3D() {
 // 3
 function Cheek_Touch_VS_Click3D() {
   Plotly.d3.csv("./datasets/Cheek_Touch_VS_Click.csv", function (err, rows) {
-    function unpack(rows, keys) {
+    function unpack(rows, key) {
       return rows.map(function (row) {
         return row[key];
       });
