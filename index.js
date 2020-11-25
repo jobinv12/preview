@@ -1,72 +1,63 @@
 var dfd = require("danfojs-node");
 var selectValue;
-var isLoaded = false;
-function loadData() {
-  selectValue = document.getElementById("datasets").value;
-
-  if (selectValue == "Select") {
-    console.log(selectValue);
-    alert("Select a dataset to load data");
-  } else {
-    alert(selectValue + " is Loaded");
-    isLoaded = true;
-  }
-}
 
 function generateGraph() {
   selectValue = document.getElementById("datasets").value;
-  if (isLoaded == true) {
-    alert(selectValue + " Graph is Generated.");
-    if (selectValue == "CheekLeftRight.csv") {
-      Cheek_Left_Right();
-      isLoaded = false;
-    } else if (selectValue == "Cheek_Tap.csv") {
-      Cheek_Tap();
-      isLoaded = false;
-    } else if (selectValue == "Cheek_Touch_VS_Click.csv") {
-      Cheek_Touch_VS_Click();
-      isLoaded = false;
-    } else if (selectValue == "Cheek_Up_Down.csv") {
-      Cheek_Up_Down();
-      isLoaded = false;
-    } else if (selectValue == "Fontal_Control_Up.csv") {
-      Fontal_Control_Up();
-      isLoaded = false;
-    } else if (selectValue == "Frontal_Control_Down.csv") {
-      Frontal_Control_Down();
-      isLoaded = false;
-    } else if (selectValue == "Frontal_Control_Forward_Long_Press.csv") {
-      Frontal_Control_Forward_Long_Press();
-      isLoaded = false;
-    } else if (selectValue == "Frontal_Control_Forward.csv") {
-      Frontal_Control_Forward();
-      isLoaded = false;
-    } else if (selectValue == "Frontal_Control_Left.csv") {
-      Frontal_Control_Left();
-      isLoaded = false;
-    } else if (selectValue == "Frontal_Control_Right.csv") {
-      Frontal_Control_Right();
-      isLoaded = false;
-    } else if (selectValue == "Frontal_Left_Right.csv") {
-      Frontal_Left_Right();
-      isLoaded = false;
-    } else if (selectValue == "Frontal_Resting_Control.csv") {
-      Frontal_Resting_Control();
-      isLoaded = false;
-    } else if (selectValue == "Frontal_Resting.csv") {
-      Frontal_Resting();
-      isLoaded = false;
-    } else if (selectValue == "Frontal_Up_Down.csv") {
-      Frontal_Up_Down();
-      isLoaded = false;
-    }
+
+  document.getElementById("Fig1").style.display = "none";
+  document.getElementById("Fig2").style.display = "none";
+  document.getElementById("Fig3").style.display = "none";
+  document.getElementById("Fig4").style.display = "none";
+
+  if (selectValue == "CheekLeftRight.csv") {
+    alert(selectValue + " 2D Graph is Generated.");
+    Cheek_Left_Right2D();
+  } else if (selectValue == "Cheek_Tap.csv") {
+    alert(selectValue + " 2D Graph is Generated.");
+    Cheek_Tap();
+  } else if (selectValue == "Cheek_Touch_VS_Click.csv") {
+    alert(selectValue + " 2D Graph is Generated.");
+    Cheek_Touch_VS_Click2D();
+  } else if (selectValue == "Cheek_Up_Down.csv") {
+    alert(selectValue + " 2D Graph is Generated.");
+    Cheek_Up_Down();
+  } else if (selectValue == "Fontal_Control_Up.csv") {
+    alert(selectValue + " 2D Graph is Generated.");
+    Fontal_Control_Up2D();
+  } else if (selectValue == "Frontal_Control_Down.csv") {
+    alert(selectValue + " 2D Graph is Generated.");
+    Frontal_Control_Down2D();
+  } else if (selectValue == "Frontal_Control_Forward_Long_Press.csv") {
+    alert(selectValue + " 2D Graph is Generated.");
+    Frontal_Control_Forward_Long_Press2D();
+  } else if (selectValue == "Frontal_Control_Forward.csv") {
+    alert(selectValue + " 2D Graph is Generated.");
+    Frontal_Control_Forward2D();
+  } else if (selectValue == "Frontal_Control_Left.csv") {
+    alert(selectValue + " 2D Graph is Generated.");
+    Frontal_Control_Left2D();
+  } else if (selectValue == "Frontal_Control_Right.csv") {
+    alert(selectValue + " 2D Graph is Generated.");
+    Frontal_Control_Right2D();
+  } else if (selectValue == "Frontal_Left_Right.csv") {
+    alert(selectValue + " 2D Graph is Generated.");
+    Frontal_Left_Right2D();
+  } else if (selectValue == "Frontal_Resting_Control.csv") {
+    alert(selectValue + " 2D Graph is Generated.");
+    Frontal_Resting_Control2D();
+  } else if (selectValue == "Frontal_Resting.csv") {
+    alert(selectValue + " 2D Graph is Generated.");
+    Frontal_Resting2D();
+  } else if (selectValue == "Frontal_Up_Down.csv") {
+    alert(selectValue + " 2D Graph is Generated.");
+    Frontal_Up_Down2D();
   } else {
     alert("Please Load Data");
   }
 }
 
 // 1
-function Cheek_Left_Right() {
+function Cheek_Left_Right2D() {
   dfd
     .read_csv("./datasets/Cheek_Left_Right.csv")
     .then((df) => {
@@ -84,7 +75,7 @@ function Cheek_Left_Right() {
 }
 
 // 2
-function Cheek_Tap() {
+function Cheek_Tap2D() {
   dfd
     .read_csv("./datasets/Cheek_Tap.csv")
     .then((df) => {
@@ -102,7 +93,7 @@ function Cheek_Tap() {
 }
 
 // 3
-function Cheek_Touch_VS_Click() {
+function Cheek_Touch_VS_Click2D() {
   dfd
     .read_csv("./datasets/Cheek_Touch_VS_Click.csv")
     .then((df) => {
@@ -120,7 +111,7 @@ function Cheek_Touch_VS_Click() {
 }
 
 // 4
-function Cheek_Up_Down() {
+function Cheek_Up_Down2D() {
   dfd
     .read_csv("./datasets/Cheek_Up_Down.csv")
     .then((df) => {
@@ -138,7 +129,7 @@ function Cheek_Up_Down() {
 }
 
 // 5
-function Fontal_Control_Up() {
+function Fontal_Control_Up2D() {
   dfd
     .read_csv("./datasets/Fontal_Control_Up.csv")
     .then((df) => {
@@ -156,7 +147,7 @@ function Fontal_Control_Up() {
 }
 
 // 6
-function Frontal_Control_Down() {
+function Frontal_Control_Down2D() {
   dfd
     .read_csv("./datasets/Frontal_Control_Down.csv")
     .then((df) => {
@@ -174,7 +165,7 @@ function Frontal_Control_Down() {
 }
 
 // 7
-function Frontal_Control_Forward_Long_Press() {
+function Frontal_Control_Forward_Long_Press2D() {
   dfd
     .read_csv("./datasets/Frontal_Control_Forward_Long_Press_.csv")
     .then((df) => {
@@ -192,7 +183,7 @@ function Frontal_Control_Forward_Long_Press() {
 }
 
 // 8
-function Frontal_Control_Forward() {
+function Frontal_Control_Forward2D() {
   dfd
     .read_csv("./datasets/Frontal_Control_Forward.csv")
     .then((df) => {
@@ -210,7 +201,7 @@ function Frontal_Control_Forward() {
 }
 
 // 9
-function Frontal_Control_Left() {
+function Frontal_Control_Left2D() {
   dfd
     .read_csv("./datasets/Frontal_Control_Left.csv")
     .then((df) => {
@@ -228,7 +219,7 @@ function Frontal_Control_Left() {
 }
 
 // 10
-function Frontal_Control_Right() {
+function Frontal_Control_Right2D() {
   dfd
     .read_csv("./datasets/Frontal_Control_Right.csv")
     .then((df) => {
@@ -246,7 +237,7 @@ function Frontal_Control_Right() {
 }
 
 // 11
-function Frontal_Left_Right() {
+function Frontal_Left_Right2D() {
   dfd
     .read_csv("./datasets/Frontal_Left_Right.csv")
     .then((df) => {
@@ -264,7 +255,7 @@ function Frontal_Left_Right() {
 }
 
 // 12
-function Frontal_Resting_Control() {
+function Frontal_Resting_Control2D() {
   dfd
     .read_csv("./datasets/Frontal_Resting_Control.csv")
     .then((df) => {
@@ -282,7 +273,7 @@ function Frontal_Resting_Control() {
 }
 
 // 13
-function Frontal_Resting() {
+function Frontal_Resting2D() {
   dfd
     .read_csv("./datasets/Frontal_Resting.csv")
     .then((df) => {
@@ -300,7 +291,7 @@ function Frontal_Resting() {
 }
 
 // 14
-function Frontal_Up_Down() {
+function Frontal_Up_Down2D() {
   dfd
     .read_csv("./datasets/Frontal_Up_Down.csv")
     .then((df) => {

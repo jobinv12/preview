@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--danfojs CDN -->
     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.0.15/dist/index.min.js"></script>
+    <!-- plotly.js cdn -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <!-- bootstrap -->
     <link
       rel="stylesheet"
@@ -12,13 +14,16 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="./style.css" />
     <title>Visualize Your Move</title>
   </head>
   ​
   <body>
     <script src="index.js"></script>
+    <script src="3d.js"></script>
     <div class="container text-center">
-      <h1>Visualize your Move in 2D</h1>
+      <h1>Visualize your Move</h1>
       <div class="form-group col-md-5 mt-4 ml-auto mr-auto">
         <select class="form-control" id="datasets">
           <option value="Select">Select a Dataset</option>
@@ -54,21 +59,14 @@
       </div>
       <div class="mt-4">
         <button
-          type="submit"
-          class="btn btn-outline-primary btn-sm mr-5"
-          onclick="loadData()"
-        >
-          Load Data
-        </button>
-        <button
           class="btn btn-outline-primary btn-sm mr-5"
           onclick="generateGraph()"
         >
-          Generate Graph
+          Visualize in 2D
         </button>
         <button
           class="btn btn-outline-primary btn-sm mr-5"
-          onclick="location.href='3d.html'"
+          onclick="generateGraph3d()"
         >
           Visualize in 3D
         </button>
@@ -76,11 +74,16 @@
     </div>
     <div class="text-center">
       <div id="div1"></div>
+      <div id="Fig1"><p>Fig 1: x1 y1 z1</p></div>
       <div id="div2"></div>
+      <div id="Fig2"><p>Fig 2: x2 y2 z2</p></div>
       <div id="div3"></div>
+      <div id="Fig3"><p>Fig 3: x3 y3 z3</p></div>
       <div id="div4"></div>
+      <div id="Fig4"><p>Fig 4: x4 y4 z4</p></div>
     </div>
     <script src="index.js"></script>
+    <script src="3d.js"></script>
   </body>
   ​
 </html>
