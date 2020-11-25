@@ -1,7 +1,7 @@
 var dfd = require("danfojs-node");
 var selectValue;
 
-function generateGraph() {
+function generateGraph2d() {
   selectValue = document.getElementById("datasets").value;
 
   document.getElementById("Fig1").style.display = "none";
