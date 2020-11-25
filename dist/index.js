@@ -14,13 +14,13 @@ function generateGraph2d() {
     Cheek_Left_Right2D();
   } else if (selectValue == "Cheek_Tap.csv") {
     alert(selectValue + " 2D Graph is Generated.");
-    Cheek_Tap();
+    Cheek_Tap2D();
   } else if (selectValue == "Cheek_Touch_VS_Click.csv") {
     alert(selectValue + " 2D Graph is Generated.");
     Cheek_Touch_VS_Click2D();
   } else if (selectValue == "Cheek_Up_Down.csv") {
     alert(selectValue + " 2D Graph is Generated.");
-    Cheek_Up_Down();
+    Cheek_Up_Down2D();
   } else if (selectValue == "Fontal_Control_Up.csv") {
     alert(selectValue + " 2D Graph is Generated.");
     Fontal_Control_Up2D();
