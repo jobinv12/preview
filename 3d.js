@@ -13,7 +13,7 @@ function generateGraph3d() {
     Cheek_Left_Right3D();
   } else if (selectValue == "Cheek_Tap.csv") {
     alert(selectValue + " 3D Graph is Generated.");
-    Cheek_Tap();
+    Cheek_Tap3D();
   } else if (selectValue == "Cheek_Touch_VS_Click.csv") {
     alert(selectValue + " 3D Graph is Generated.");
     Cheek_Touch_VS_Click3D();
