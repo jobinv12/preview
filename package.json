@@ -2,12 +2,12 @@
   "name": "visualizeyourmove",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "home.html",
   "scripts": {
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jobin Thavu Varghese",
   "license": "ISC",
   "homepage": "https://jobinv12.github.io/preview",
   "dependencies": {
