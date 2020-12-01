@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--danfojs CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.0.15/dist/index.min.js"></script>
+    <!-- plotly.js cdn -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <!-- bootstrap -->
     <link
       rel="stylesheet"
@@ -14,9 +18,9 @@
     <link rel="stylesheet" href="./style.css" />
     <title>Visualize Your Move</title>
   </head>
-  <body class="bg">
+  <body>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark mt-0">
-      <a class="navbar-brand" href="home.html"></a>
+      <a class="navbar-brand" href="index.html"></a>
       <button
         class="navbar-toggler"
         type="button"
@@ -30,36 +34,48 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link active" href="home.html"
+          <a class="nav-link active" href="index.html"
             >Home <span class="sr-only">(current)</span></a
           >
-          <a class="nav-link" href="index.html">Select and Load</a>
-          <a class="nav-link" href="browse.html">Browse and Load</a>
+          <a class="nav-link" href="selectandload.html">Select and Load</a>
+          <a class="nav-link" href="browseandload.html">Browse and Load</a>
         </div>
       </div>
     </nav>
-    <div class="container">
-      <div class="text-center mt-3 pad"></div>
-      <div class="row text-center mt-5">
-        <div class="col text-font">
-          <h1>VISUALIZE</h1>
-          <h1>YOUR</h1>
-          <h1>DATA.</h1>
-        </div>
-        <div class="col">
-          <img src="./brain.jpg" />
-          <h4 class="text-font mt-4">
-            ALWAYS INNOVATE AND REINFORCEMENT FOR LEARNING
-          </h4>
-        </div>
-        <div class="col text-font">
-          <h1>ONE DATA</h1>
-          <h1>CAN</h1>
-          <h1>CONSTITUTE</h1>
-          <h1>ALL SENSES</h1>
-        </div>
+
+    <script src="browse.js"></script>
+    <div class="container text-center">
+      <h1>Visualize your Move</h1>
+      <h4>Browse and Load datasets</h4>
+      <div class="form-group col-md-5 mt-4 ml-auto mr-auto">
+        <input type="file" id="filepath" />
+      </div>
+      <div class="mt-4">
+        <button
+          class="btn btn-outline-primary btn-sm mr-5"
+          onclick="browseGraph2D()"
+        >
+          Visualize in 2D
+        </button>
+        <button
+          class="btn btn-outline-primary btn-sm mr-5"
+          onclick="browseGraph3d()"
+        >
+          Visualize in 3D
+        </button>
       </div>
     </div>
+    <div class="text-center">
+      <div id="div1"></div>
+      <div id="Fig1"><p>Fig 1: x1 y1 z1</p></div>
+      <div id="div2"></div>
+      <div id="Fig2"><p>Fig 2: x2 y2 z2</p></div>
+      <div id="div3"></div>
+      <div id="Fig3"><p>Fig 3: x3 y3 z3</p></div>
+      <div id="div4"></div>
+      <div id="Fig4"><p>Fig 4: x4 y4 z4</p></div>
+    </div>
+    <script src="3d.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -71,4 +87,6 @@
       crossorigin="anonymous"
     ></script>
   </body>
+  ​
 </html>
+​
