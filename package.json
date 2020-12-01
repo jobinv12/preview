@@ -2,14 +2,14 @@
   "name": "visualizeyourmove",
   "version": "1.0.0",
   "description": "",
-  "main": "home.html",
+  "main": "",
   "scripts": {
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "Jobin Thavu Varghese",
   "license": "ISC",
-  "homepage": "https://jobinv12.github.io/preview",
+  "homepage": "https://jobinv12.github.io/preview/home.html",
   "dependencies": {
     "danfojs-node": "^0.1.5",
     "gh-pages": "^3.1.0"
