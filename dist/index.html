@@ -16,7 +16,7 @@
   </head>
   <body class="bg">
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark mt-0">
-      <a class="navbar-brand" href="index.html"></a>
+      <a class="navbar-brand" href="index.html">Visualize Your Move</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -29,37 +29,40 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active" href="index.html"
+        <div class="navbar-nav mx-auto">
+          <a
+            class="nav-item nav-link active"
+            href="index.html"
+            id="menuItemHome"
             >Home <span class="sr-only">(current)</span></a
           >
-          <a class="nav-link" href="selectandload.html">Select and Load</a>
-          <a class="nav-link" href="browseandload.html">Browse and Load</a>
+          <a
+            class="nav-item nav-link"
+            href="selectandload.html"
+            id="menuItemSelect"
+            >Select and Load</a
+          >
+          <a
+            class="nav-item nav-link"
+            href="browseandload.html"
+            id="menuItemBrowse"
+            >Browse and Load</a
+          >
         </div>
       </div>
     </nav>
-    <div class="container-sm">
-      <div class="text-center mt-3 pad"></div>
-      <div class="row text-center mt-5">
-        <div class="col-sm text-font">
-          <h1>VISUALIZE</h1>
-          <h1>YOUR</h1>
-          <h1>DATA.</h1>
-        </div>
-        <div class="col-sm">
-          <img src="./brain.jpg" />
-          <h4 class="text-font mt-4">
-            ALWAYS INNOVATE AND REINFORCEMENT FOR LEARNING
-          </h4>
-        </div>
-        <div class="col-sm text-font">
-          <h1>ONE DATA</h1>
-          <h1>CAN</h1>
-          <h1>CONSTITUTE</h1>
-          <h1>ALL SENSES</h1>
-        </div>
+    <div>
+      <video autoplay loop muted id="bgVideo">
+        <source src="./bg.mp4" type="video/mp4" />
+      </video>
+      <div class="content1 text-font" clas>
+        <h4>ALWAYS REINFORCEMENT LEARNING.</h4>
+      </div>
+      <div class="content2 text-font">
+        <p>ONE DATA CAN CONSTITUTE ALL SENSES.</p>
       </div>
     </div>
+    <script src="template.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

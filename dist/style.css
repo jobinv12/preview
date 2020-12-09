@@ -14,21 +14,31 @@
   display: none;
 }
 
-.mt-0 {
-  margin-top: 0px;
-}
-
-.bg {
-  background-image: url(./bg.jpg);
-  height: 100%;
-  background-repeat: no-repeat;
-}
-
 .text-font {
   color: white;
   font-weight: bolder;
 }
 
-.pad {
-  padding: 50px;
+#bgVideo {
+  bottom: 0px;
+  right: 0px;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.content1 {
+  position: fixed;
+  width: 100%;
+  bottom: 500px;
+  padding: 20px;
+  text-align: center;
+}
+
+.content2 {
+  position: fixed;
+  width: 100%;
+  bottom: 50px;
+  padding: 20px;
+  text-align: center;
+  font-size: 500%;
 }

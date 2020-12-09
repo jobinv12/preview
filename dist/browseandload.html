@@ -19,8 +19,9 @@
     <title>Visualize Your Move</title>
   </head>
   <body>
+    <div class="menu"></div>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark mt-0">
-      <a class="navbar-brand" href="index.html"></a>
+      <a class="navbar-brand" href="index.html">Visualize Your Move</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -33,22 +34,22 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active" href="index.html"
-            >Home <span class="sr-only">(current)</span></a
-          >
+        <div class="navbar-nav mx-auto">
+          <a class="nav-link" href="index.html">Home </a>
           <a class="nav-link" href="selectandload.html">Select and Load</a>
-          <a class="nav-link" href="browseandload.html">Browse and Load</a>
+          <a class="nav-link active" href="browseandload.html"
+            >Browse and Load <span class="sr-only">(current)</span></a
+          >
         </div>
       </div>
     </nav>
-
-    <script src="browse.js"></script>
     <div class="container text-center">
       <h1>Visualize your Move</h1>
       <h4>Browse and Load datasets</h4>
       <div class="form-group col-md-5 mt-4 ml-auto mr-auto">
-        <input type="file" id="filepath" />
+        <form enctype="multipart/form-data">
+          <input type="file" id="filepath" accept=".csv" />
+        </form>
       </div>
       <div class="mt-4">
         <button
@@ -75,7 +76,7 @@
       <div id="div4"></div>
       <div id="Fig4"><p>Fig 4: x4 y4 z4</p></div>
     </div>
-    <script src="3d.js"></script>
+    <script src="browseandload.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
